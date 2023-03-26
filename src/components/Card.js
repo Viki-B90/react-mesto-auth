@@ -23,7 +23,7 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
 
   return (
     <li className="element">
-      <img className="element__image" src={card.link} onClick={handleCardClick} alt="" />
+      <img className="element__image" src={card.link} onClick={handleCardClick} alt={card.name} />
       {isOwn && <button className='element__delete' onClick={handleDeleteClick} type="button" />}
       <div className="element__group">
         <h2 className="element__title">{card.name}</h2>
