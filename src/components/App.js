@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import Header from './Header';
@@ -241,12 +242,7 @@ function App() {
           <Route exact path='/'
             element={
               <>
-                <Header
-                  titleOut='Выйти'
-                  route=''
-                  email={email}
-                  onClick={handleSignout}
-                />
+                <Header titleOut='Выйти' route='' email={email} onClick={handleSignout} />
                 <ProtectedRoute
                   component={Main}
                   loggedIn={loggedIn}
@@ -264,26 +260,16 @@ function App() {
           <Route path='/signup'
             element={
               <>
-                <Header
-                  title='Войти'
-                  route='/signin'
-                />
-                <Register
-                  onRegister={handleRegister}
-                />
+                <Header title='Войти' route='/signin' />
+                <Register onRegister={handleRegister} />
               </>
             }
           />
           <Route path='/signin'
             element={
               <>
-                <Header
-                  title='Регистрация'
-                  route='/signup'
-                />
-                <Login
-                  onLogin={handleLogin}
-                />
+                <Header title='Регистрация' route='/signup' />
+                <Login onLogin={handleLogin} />
               </>
             }
           />

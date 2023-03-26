@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect } from 'react';
 
 function PopupWithForm({ name, title, isOpen, onClose, onCloseEsc, onCloseOverlay, onSubmit, renderLoading, buttonText, buttonTextLoading, children }) {
